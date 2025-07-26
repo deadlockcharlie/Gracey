@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "out/electron/index.js",
   "scripts": {
-    "build": "tsc && esbuild src/website/renderer.tsx --bundle --outfile=out/website/renderer.js --platform=browser && cp -r ./src/website/static/* ./out/website/static/",
+    "build": "tsc && esbuild src/website/renderer.tsx --bundle --outfile=out/website/renderer.js --platform=browser && cp -r ./src/website/static/* ./out/website/static/ && cp -r ./src/website/index.html ./out/website/index.html",
     "watch:tsc": "tsc -w",
     "watch:esbuild": "esbuild src/website/renderer.tsx --bundle --outfile=out/website/renderer.js --platform=browser --watch",
     "watch": "concurrently \"npm run watch:tsc\" \"npm run watch:esbuild\"",
